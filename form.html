@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms - send data to Front</title>
+    <link href="style.css" type="text/css" rel="stylesheet">
+</head>
+<header class="header">
+    <button class="hamburger hamburger--js" aria-label="Menu">🍔</button>
+    <nav class="navigation navigation--js">
+        <a class="navigation__link" href="index.html">Home</a>
+        <a class="navigation__link" href="about.html">About Me</a>
+        <a class="navigation__link" href="cv.html">CV</a>
+        <a class="navigation__link" href="blog.html">Blog</a>
+        <a class="navigation__link" href="newsletter.html">Newsletter</a>
+        <a class="navigation__link" href="privacy.html">Privacy Policy</a>
+        <a class="navigation__link" href="cookies.html">Cookies Policy</a>
+        <a class="navigation__link" href="business_card.html">Business card</a>
+        <a class="navigation__link" href="form.html">Forms</a>
+    </nav>
+</header>
+<body>
+    <main>
+        <header> Formularze </header>
+        <section class="form">
+            <form action=" https://forms.cotenfrontend.pl" method="post">
+                <p>
+                    <label for="name">Imię</label>
+                    <input name="name" id="name" type="text" value="Ziomisław"
+                        placeholder="Twoje imię"></input>
+                </p>
+                <p>
+                    <label for="lastName">Nazwisko</label>
+                    <input name="lastName" id="lastName" type="text" placeholder="Twoje nazwisko" required></input>
+                </p>
+                <fieldset>
+                    <legend>Dane adresowe:</legend>
+                    <p>
+                        <label for="riddle">Zagadka</label>
+                        <input name="riddle" id="riddle" type="text" placeholder="Twoja Zagadka"></input>
+                    </p>
+                    <p>
+                        <label for="city">Miasto</label>
+                        <input name="city" id="city" type="text" placeholder="Twoje miasto"></input>
+                    </p>
+                    <p>
+                        <label for="postalCode">Kod pocztowy</label>
+                        <input name="postalCode" id="postalCode" type="text" placeholder="Twój kod pocztowy" pattern="[0-9]{2}-[0-9]{3}" required></input>
+                    </p>
+                    <p>
+                        <label for="secret">Tajna wiadomość</label>
+                        <input name="secret" id="secret" type="password"></input>
+                    </p>
+                    <p>
+                        <label for="avatar">Zdjęcie (avatar)</label>
+                        <input name="avatar" id="avatar" type="file"></input>
+                    </p>
+                </fieldset>
+                <fieldset>
+                    <legend>Ulubione lody:</legend>
+                    <p>
+                        <label>
+                            <input name="icecream" type="radio" value="chocolate"></input>
+                            Czekoladowe </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input name="icecream" checked type="radio" value="vanilla"></input>
+                            Waniliowe
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input name="icecream" type="radio" value="strawberry"></input>
+                            Truskawkowe
+                        </label>
+                    </p>
+                </fieldset>
+                <fieldset>
+                    <legend>Ulubione zespoły:</legend>
+                    <p>
+                        <label>
+                            <input name="band" type="checkbox" value="radiohead"></input>
+                            Radiohead </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input name="band" checked type="checkbox" value="metallica"></input>
+                            Metallica
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input name="band" type="checkbox" value="akcent"></input>
+                            Akcent
+                        </label>
+                    </p>
+                </fieldset>
+                <fieldset>
+                    <legend>Dane kontaktowe:</legend>
+                    <p>
+                        <label for="tel"> Telefon </label>
+                            <input name="tel" id="tel" type="tel" placeholder="Twój telefon"></input>
+                    </p>
+                    <p>
+                        <label for="age"> Wiek </label>
+                            <input name="age" id="age" type="number" placeholder="Twój wiek"></input>
+                    </p>
+                    <p>
+                        <label for="email"> E-mail </label>
+                            <input name="email" id="email" type="email" placeholder="Twój e-mail"></input>
+                    </p>
+                    <p>
+                        <label for="range"> Zakres </label>
+                            <input name="range" id="range" type="range" min="0" max="100" step="5" placeholder="Zakres Twojego pcipciaka"></input>
+                    </p>
+                </fieldset>
+                <fieldset>
+                    <legend>Zamówienie:</legend>
+                    <p>
+                        <label for="size"> Rozmiar koszulki </label>
+                            <select id="size" name="size">
+                                <option value="xxl">XXL</option>
+                                <option value="xl">XL</option>
+                                <option selected value="l">L</option>
+                                <option value="m">M</option>
+                                <option value="s">S</option>    
+                            </select>
+                    </p>
+                    <p>
+                        <label for="comment"> Komentarze do zamówienia - stylowane atrybutami </label> <br>
+                            <textarea id="comment" name="comment" cols="40" rows="20">  
+                            </textarea>
+                    </p>
+                    <p>
+                        <label for="comment2"> Komentarze do zamówienia - stylowane css </label> <br>
+                            <textarea id="comment2" name="comment2" placeholder="Komentarz"></textarea>
+                    </p>
+                </fieldset>
+                <p>
+                    <input type="submit" value="wyślij"></input>
+                </p>
+            </form>
+        </section>
+    </main>
+</body>
+<script defer src="main.js"></script>
+<script defer src="hamburger.js"></script>
+</html>
